@@ -1,0 +1,97 @@
+Scenario,Tool,Tasks,Phase,Iteration,Sample,Duration,Count
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,1,total execution time,68727.17,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,1,garbage collection time,502.00,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,1,task start,6986.00,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,2,total execution time,2411.33,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,2,garbage collection time,14.00,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,2,task start,174.00,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,3,total execution time,2183.84,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,3,garbage collection time,16.00,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,3,task start,152.00,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,4,total execution time,2154.26,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,4,garbage collection time,15.00,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,4,task start,156.00,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,5,total execution time,2251.45,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,5,garbage collection time,19.00,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,5,task start,127.00,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,6,total execution time,2119.48,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,6,garbage collection time,15.00,1
+abiChange,Gradle 7.5.1,compileJava,WARM_UP,6,task start,128.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,1,total execution time,2183.36,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,1,garbage collection time,5.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,1,task start,121.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,2,total execution time,2114.28,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,2,garbage collection time,5.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,2,task start,123.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,3,total execution time,2068.10,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,3,garbage collection time,0.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,3,task start,103.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,4,total execution time,2109.33,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,4,garbage collection time,4.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,4,task start,120.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,5,total execution time,2064.54,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,5,garbage collection time,4.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,5,task start,109.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,6,total execution time,2145.89,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,6,garbage collection time,5.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,6,task start,104.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,7,total execution time,2057.74,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,7,garbage collection time,0.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,7,task start,100.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,8,total execution time,2101.77,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,8,garbage collection time,5.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,8,task start,99.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,9,total execution time,2050.89,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,9,garbage collection time,5.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,9,task start,109.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,10,total execution time,2110.88,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,10,garbage collection time,5.00,1
+abiChange,Gradle 7.5.1,compileJava,MEASURE,10,task start,140.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,1,total execution time,13202.54,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,1,garbage collection time,132.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,1,task start,6691.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,2,total execution time,1366.86,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,2,garbage collection time,4.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,2,task start,190.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,3,total execution time,1319.95,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,3,garbage collection time,4.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,3,task start,152.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,4,total execution time,1268.31,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,4,garbage collection time,3.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,4,task start,154.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,5,total execution time,1188.12,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,5,garbage collection time,0.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,5,task start,127.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,6,total execution time,1175.95,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,6,garbage collection time,3.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,WARM_UP,6,task start,131.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,1,total execution time,1204.80,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,1,garbage collection time,4.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,1,task start,118.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,2,total execution time,1165.65,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,2,garbage collection time,4.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,2,task start,112.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,3,total execution time,1184.06,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,3,garbage collection time,0.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,3,task start,110.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,4,total execution time,1154.95,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,4,garbage collection time,3.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,4,task start,113.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,5,total execution time,1176.83,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,5,garbage collection time,4.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,5,task start,121.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,6,total execution time,1207.64,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,6,garbage collection time,0.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,6,task start,106.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,7,total execution time,1165.93,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,7,garbage collection time,4.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,7,task start,109.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,8,total execution time,1137.06,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,8,garbage collection time,4.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,8,task start,101.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,9,total execution time,1195.90,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,9,garbage collection time,0.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,9,task start,108.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,10,total execution time,1205.15,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,10,garbage collection time,3.00,1
+nonAbiChange,Gradle 7.5.1,compileJava,MEASURE,10,task start,154.00,1
