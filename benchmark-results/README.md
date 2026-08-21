@@ -73,3 +73,30 @@ Execution accounted for most of the total build time. The scan also showed that 
 ## Reference
 
 Gradle Profiler documentation: <https://github.com/gradle/gradle-profiler>
+
+## Gradle 7.6.4 compatibility benchmark
+
+### Provenance
+
+- Branch: `feature/gradle-upgrade`
+- Commit: `dd8b122114c66461827208a60191cbd47e9d91fb`
+- Gradle version: 7.6.4
+- Gradle Profiler version: 0.25.2
+- Method: six warm-up builds and ten measured builds for each scenario, using an isolated Gradle user home.
+
+### Results and comparison with the initial baseline
+
+| Scenario | Gradle 7.5.1 mean | Gradle 7.6.4 mean | Difference | Change |
+| --- | ---: | ---: | ---: | ---: |
+| ABI change | 2,100.68 ms | 2,251.89 ms | +151.21 ms | +7.20% |
+| Non-ABI change | 1,179.80 ms | 1,201.19 ms | +21.39 ms | +1.81% |
+
+For this machine and these scenarios, the Gradle 7.6.4 compatibility upgrade completed successfully but did not improve incremental compilation performance. The ABI-change scenario showed the larger regression. This result is retained as an intermediate comparison point; later optimisation changes will be benchmarked separately rather than attributing a performance benefit to the version upgrade alone.
+
+The measured results also showed moderate variation: the standard deviation was 66.96 ms for the ABI-change scenario and 16.72 ms for the non-ABI-change scenario.
+
+### Result files
+
+- `gradle-7.6.4/benchmark.html`
+- `gradle-7.6.4/benchmark.csv`
+- `gradle-7.6.4/profile.log`

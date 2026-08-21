@@ -1,0 +1,771 @@
+
+* Started at 2026-08-21T16:47:11.229100900Z
+
+* Settings
+Project dir: C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.
+Output dir: C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\benchmark-results\gradle-7.6.4
+Profiler: none
+Benchmark: true
+Versions: [7.6.4]
+Gradle User Home: C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4
+Targets: [abiChange, nonAbiChange]
+Warm-ups: 6
+Builds: 10
+
+* Inspecting the build using Gradle version '7.6.4'
+Downloading https://services.gradle.org/distributions/gradle-7.6.4-bin.zip
+.....................................................................................................................
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :help
+
+Welcome to Gradle 7.6.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.6.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 5s
+1 actionable task: 1 executed
+
+* Stopping daemons
+Running command C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4\wrapper\dists\gradle-7.6.4-bin\eq47ircvekz8t0m2yd28ebfsh\gradle-7.6.4\bin\gradle.bat --stop --gradle-user-home C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4
+
+Welcome to Gradle 7.6.4!
+
+Here are the highlights of this release:
+ - Added support for Java 19.
+ - Introduced `--rerun` flag for individual task rerun.
+ - Improved dependency block for test suites to be strongly typed.
+ - Added a pluggable system for Java toolchains provisioning.
+
+For more details see https://docs.gradle.org/7.6.4/release-notes.html
+
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Scenarios
+Scenario: abiChange using Gradle 7.6.4
+  Gradle 7.6.4 (C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4\wrapper\dists\gradle-7.6.4-bin\eq47ircvekz8t0m2yd28ebfsh\gradle-7.6.4)
+  Run using: Tooling API
+  Run: run tasks compileJava
+  Cleanup: do nothing
+  Gradle args: []
+  Build operations trace: false
+  Build changes: [ApplyAbiChangeToSourceFileMutator(C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java)]
+  Warm-ups: 6
+  Builds: 10
+Scenario: nonAbiChange using Gradle 7.6.4
+  Gradle 7.6.4 (C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4\wrapper\dists\gradle-7.6.4-bin\eq47ircvekz8t0m2yd28ebfsh\gradle-7.6.4)
+  Run using: Tooling API
+  Run: run tasks compileJava
+  Cleanup: do nothing
+  Gradle args: []
+  Build operations trace: false
+  Build changes: [ApplyNonAbiChangeToSourceFileMutator(C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java)]
+  Warm-ups: 6
+  Builds: 10
+
+* Running scenario abiChange using Gradle 7.6.4 (scenario 1/2)
+
+* Stopping daemons
+Running command C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4\wrapper\dists\gradle-7.6.4-bin\eq47ircvekz8t0m2yd28ebfsh\gradle-7.6.4\bin\gradle.bat --stop --gradle-user-home C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4
+No Gradle daemons are running.
+
+* Build details
+Gradle version: Gradle 7.6.4
+Java home: C:\Program Files\Eclipse Adoptium\jdk-17.0.20.8-hotspot
+OS: windows 10 amd64 10.0
+JVM args:
+  -XX:MaxMetaspaceSize=512m
+  --add-opens=java.base/java.util=ALL-UNNAMED
+  --add-opens=java.base/java.lang=ALL-UNNAMED
+  --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+  --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED
+  --add-opens=java.base/java.nio.charset=ALL-UNNAMED
+  --add-opens=java.base/java.net=ALL-UNNAMED
+  --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+  -Xmx1g
+  -Dfile.encoding=windows-1250
+  -Duser.country=PL
+  -Duser.language=pl
+  -Duser.variant
+  -Dorg.gradle.profiler.scenario=abiChange
+Gradle args:
+  --gradle-user-home
+  C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4
+  -I
+  C:\Users\AsusPC\AppData\Local\Temp\gradleProfiler17786189310531824452.gradle
+  -I
+  C:\Users\AsusPC\AppData\Local\Temp\gradleProfiler16308651914296005107.gradle
+
+* Running warm-up build #1
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 16s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 135 ms
+Time to task execution 7222 ms
+Execution time 16980 ms
+
+* Running warm-up build #2
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 8 ms
+Time to task execution 239 ms
+Execution time 2471 ms
+
+* Running warm-up build #3
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 14 ms
+Time to task execution 147 ms
+Execution time 2543 ms
+
+* Running warm-up build #4
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 0 ms
+Time to task execution 199 ms
+Execution time 2510 ms
+
+* Running warm-up build #5
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 11 ms
+Time to task execution 141 ms
+Execution time 2378 ms
+
+* Running warm-up build #6
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 0 ms
+Time to task execution 133 ms
+Execution time 2204 ms
+
+* Using args for instrumented builds:
+
+* Running measured build #1
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 10 ms
+Time to task execution 123 ms
+Execution time 2224 ms
+
+* Running measured build #2
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 0 ms
+Time to task execution 141 ms
+Execution time 2283 ms
+
+* Running measured build #3
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 11 ms
+Time to task execution 132 ms
+Execution time 2307 ms
+
+* Running measured build #4
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 0 ms
+Time to task execution 134 ms
+Execution time 2196 ms
+
+* Running measured build #5
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 11 ms
+Time to task execution 130 ms
+Execution time 2254 ms
+
+* Running measured build #6
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 0 ms
+Time to task execution 125 ms
+Execution time 2291 ms
+
+* Running measured build #7
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 9 ms
+Time to task execution 129 ms
+Execution time 2198 ms
+
+* Running measured build #8
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 0 ms
+Time to task execution 107 ms
+Execution time 2239 ms
+
+* Running measured build #9
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 9 ms
+Time to task execution 103 ms
+Execution time 2133 ms
+
+* Running measured build #10
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11216
+Total GC time: 0 ms
+Time to task execution 169 ms
+Execution time 2387 ms
+
+* Stopping daemons
+Running command C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4\wrapper\dists\gradle-7.6.4-bin\eq47ircvekz8t0m2yd28ebfsh\gradle-7.6.4\bin\gradle.bat --stop --gradle-user-home C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Running scenario nonAbiChange using Gradle 7.6.4 (scenario 2/2)
+
+* Stopping daemons
+Running command C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4\wrapper\dists\gradle-7.6.4-bin\eq47ircvekz8t0m2yd28ebfsh\gradle-7.6.4\bin\gradle.bat --stop --gradle-user-home C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4
+No Gradle daemons are running.
+
+* Build details
+Gradle version: Gradle 7.6.4
+Java home: C:\Program Files\Eclipse Adoptium\jdk-17.0.20.8-hotspot
+OS: windows 10 amd64 10.0
+JVM args:
+  -XX:MaxMetaspaceSize=512m
+  --add-opens=java.base/java.util=ALL-UNNAMED
+  --add-opens=java.base/java.lang=ALL-UNNAMED
+  --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+  --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED
+  --add-opens=java.base/java.nio.charset=ALL-UNNAMED
+  --add-opens=java.base/java.net=ALL-UNNAMED
+  --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+  -Xmx1g
+  -Dfile.encoding=windows-1250
+  -Duser.country=PL
+  -Duser.language=pl
+  -Duser.variant
+  -Dorg.gradle.profiler.scenario=nonAbiChange
+Gradle args:
+  --gradle-user-home
+  C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4
+  -I
+  C:\Users\AsusPC\AppData\Local\Temp\gradleProfiler6165486950967870561.gradle
+  -I
+  C:\Users\AsusPC\AppData\Local\Temp\gradleProfiler12124525101943115289.gradle
+
+* Running warm-up build #1
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 14s
+4 actionable tasks: 2 executed, 2 up-to-date
+Used daemon with pid 11724
+Total GC time: 118 ms
+Time to task execution 7325 ms
+Execution time 14228 ms
+
+* Running warm-up build #2
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 6 ms
+Time to task execution 234 ms
+Execution time 1462 ms
+
+* Running warm-up build #3
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 4 ms
+Time to task execution 169 ms
+Execution time 1319 ms
+
+* Running warm-up build #4
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 3 ms
+Time to task execution 166 ms
+Execution time 1296 ms
+
+* Running warm-up build #5
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 0 ms
+Time to task execution 143 ms
+Execution time 1304 ms
+
+* Running warm-up build #6
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 2 ms
+Time to task execution 131 ms
+Execution time 1256 ms
+
+* Using args for instrumented builds:
+
+* Running measured build #1
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 4 ms
+Time to task execution 121 ms
+Execution time 1204 ms
+
+* Running measured build #2
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 3 ms
+Time to task execution 127 ms
+Execution time 1203 ms
+
+* Running measured build #3
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 0 ms
+Time to task execution 113 ms
+Execution time 1204 ms
+
+* Running measured build #4
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 2 ms
+Time to task execution 109 ms
+Execution time 1210 ms
+
+* Running measured build #5
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 4 ms
+Time to task execution 115 ms
+Execution time 1183 ms
+
+* Running measured build #6
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 2 ms
+Time to task execution 111 ms
+Execution time 1211 ms
+
+* Running measured build #7
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 0 ms
+Time to task execution 103 ms
+Execution time 1195 ms
+
+* Running measured build #8
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 4 ms
+Time to task execution 103 ms
+Execution time 1194 ms
+
+* Running measured build #9
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 3 ms
+Time to task execution 109 ms
+Execution time 1169 ms
+
+* Running measured build #10
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Used daemon with pid 11724
+Total GC time: 4 ms
+Time to task execution 143 ms
+Execution time 1235 ms
+
+* Stopping daemons
+Running command C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4\wrapper\dists\gradle-7.6.4-bin\eq47ircvekz8t0m2yd28ebfsh\gradle-7.6.4\bin\gradle.bat --stop --gradle-user-home C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-7.6.4
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Results written to C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\benchmark-results\gradle-7.6.4
+  C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\benchmark-results\gradle-7.6.4\benchmark.csv
+  C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\benchmark-results\gradle-7.6.4\benchmark.html
+
