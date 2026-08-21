@@ -50,6 +50,26 @@ The task-start measurements were similar for both scenarios, and garbage-collect
 
 Gradle Profiler restored the mutated source file after completing the benchmark. A subsequent Git diff confirmed that the original project source remained unchanged.
 
+### Baseline Build Scan
+
+A clean build was also profiled with a Gradle Build Scan.
+
+- Date: 21 August 2026
+- Branch: `feature/gradle-upgrade`
+- Commit: `aac7732ef56db5758052df7762d77a1f85472f9d`
+- Command: `.\gradlew.bat clean build --scan --no-build-cache`
+- Build Scan: https://gradle.com/s/qebsl67wenu5o
+- Total build time: 1m 6.734s
+- Initialization: 2.758s
+- Configuration: 5.419s
+- Execution: 58.525s
+- End of build: 0.032s
+- Garbage collection: 0.441s
+- Peak heap usage: 219.1 MiB / 1 GiB (21.4%)
+- Actionable tasks executed: 12
+- Build cache: disabled for this baseline measurement
+
+Execution accounted for most of the total build time. The scan also showed that the build cache was disabled, providing a clear optimisation candidate for later controlled testing.
 ## Reference
 
 Gradle Profiler documentation: <https://github.com/gradle/gradle-profiler>
