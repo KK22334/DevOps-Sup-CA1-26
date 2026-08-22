@@ -1,0 +1,777 @@
+
+* Started at 2026-08-22T20:31:19.857183700Z
+
+* Settings
+Project dir: C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.
+Output dir: C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\benchmark-results\gradle-9.5.1-complete
+Profiler: none
+Benchmark: true
+Versions: [9.5.1]
+Gradle User Home: C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1
+Targets: [abiChange, nonAbiChange]
+Warm-ups: 6
+Builds: 10
+
+* Inspecting the build using Gradle version '9.5.1'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :help
+
+Welcome to Gradle 9.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/9.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 7s
+1 actionable task: 1 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+
+* Stopping daemons
+Running command C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1\wrapper\dists\gradle-9.5.1-bin\iq79hdu3mqx29lgffhp8bfmx\gradle-9.5.1\bin\gradle.bat --stop --gradle-user-home C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Scenarios
+Scenario: abiChange using Gradle 9.5.1
+  Gradle 9.5.1 (C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1\wrapper\dists\gradle-9.5.1-bin\iq79hdu3mqx29lgffhp8bfmx\gradle-9.5.1)
+  Run using: Tooling API
+  Run: run tasks compileJava
+  Cleanup: do nothing
+  Gradle args: []
+  Build operations trace: false
+  Build changes: [ApplyAbiChangeToSourceFileMutator(C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java)]
+  Warm-ups: 6
+  Builds: 10
+Scenario: nonAbiChange using Gradle 9.5.1
+  Gradle 9.5.1 (C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1\wrapper\dists\gradle-9.5.1-bin\iq79hdu3mqx29lgffhp8bfmx\gradle-9.5.1)
+  Run using: Tooling API
+  Run: run tasks compileJava
+  Cleanup: do nothing
+  Gradle args: []
+  Build operations trace: false
+  Build changes: [ApplyNonAbiChangeToSourceFileMutator(C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java)]
+  Warm-ups: 6
+  Builds: 10
+
+* Running scenario abiChange using Gradle 9.5.1 (scenario 1/2)
+
+* Stopping daemons
+Running command C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1\wrapper\dists\gradle-9.5.1-bin\iq79hdu3mqx29lgffhp8bfmx\gradle-9.5.1\bin\gradle.bat --stop --gradle-user-home C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1
+No Gradle daemons are running.
+
+* Build details
+Gradle version: Gradle 9.5.1
+Java home: C:\Program Files\Eclipse Adoptium\jdk-17.0.20.8-hotspot
+OS: windows 10 amd64 10.0
+JVM args:
+  -XX:MaxMetaspaceSize=512m
+  -Xmx1g
+  -Dfile.encoding=windows-1250
+  -Duser.country=PL
+  -Duser.language=pl
+  -Duser.variant
+  -Dorg.gradle.profiler.scenario=abiChange
+Gradle args:
+  --gradle-user-home
+  C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1
+  -I
+  C:\Users\AsusPC\AppData\Local\Temp\gradleProfiler7263562391367654996.gradle
+  -I
+  C:\Users\AsusPC\AppData\Local\Temp\gradleProfiler14604208015344105449.gradle
+
+* Running warm-up build #1
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 16s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 160 ms
+Time to task execution 9293 ms
+Execution time 16463 ms
+
+* Running warm-up build #2
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 18 ms
+Time to task execution 280 ms
+Execution time 2664 ms
+
+* Running warm-up build #3
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 10 ms
+Time to task execution 222 ms
+Execution time 2534 ms
+
+* Running warm-up build #4
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 16 ms
+Time to task execution 233 ms
+Execution time 2472 ms
+
+* Running warm-up build #5
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 9 ms
+Time to task execution 172 ms
+Execution time 2456 ms
+
+* Running warm-up build #6
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 20 ms
+Time to task execution 195 ms
+Execution time 2413 ms
+
+* Using args for instrumented builds:
+
+* Running measured build #1
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 9 ms
+Time to task execution 172 ms
+Execution time 2445 ms
+
+* Running measured build #2
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 13 ms
+Time to task execution 170 ms
+Execution time 2413 ms
+
+* Running measured build #3
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 17 ms
+Time to task execution 158 ms
+Execution time 2474 ms
+
+* Running measured build #4
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 8 ms
+Time to task execution 156 ms
+Execution time 2405 ms
+
+* Running measured build #5
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 20 ms
+Time to task execution 150 ms
+Execution time 2494 ms
+
+* Running measured build #6
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 9 ms
+Time to task execution 158 ms
+Execution time 2425 ms
+
+* Running measured build #7
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 20 ms
+Time to task execution 153 ms
+Execution time 2384 ms
+
+* Running measured build #8
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 9 ms
+Time to task execution 149 ms
+Execution time 2355 ms
+
+* Running measured build #9
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 13 ms
+Time to task execution 157 ms
+Execution time 2366 ms
+
+* Running measured build #10
+> Applying ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 2 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 19952
+Total GC time: 18 ms
+Time to task execution 218 ms
+Execution time 2374 ms
+
+* Stopping daemons
+Running command C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1\wrapper\dists\gradle-9.5.1-bin\iq79hdu3mqx29lgffhp8bfmx\gradle-9.5.1\bin\gradle.bat --stop --gradle-user-home C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Running scenario nonAbiChange using Gradle 9.5.1 (scenario 2/2)
+
+* Stopping daemons
+Running command C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1\wrapper\dists\gradle-9.5.1-bin\iq79hdu3mqx29lgffhp8bfmx\gradle-9.5.1\bin\gradle.bat --stop --gradle-user-home C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1
+No Gradle daemons are running.
+
+* Build details
+Gradle version: Gradle 9.5.1
+Java home: C:\Program Files\Eclipse Adoptium\jdk-17.0.20.8-hotspot
+OS: windows 10 amd64 10.0
+JVM args:
+  -XX:MaxMetaspaceSize=512m
+  -Xmx1g
+  -Dfile.encoding=windows-1250
+  -Duser.country=PL
+  -Duser.language=pl
+  -Duser.variant
+  -Dorg.gradle.profiler.scenario=nonAbiChange
+Gradle args:
+  --gradle-user-home
+  C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1
+  -I
+  C:\Users\AsusPC\AppData\Local\Temp\gradleProfiler10066009473664018008.gradle
+  -I
+  C:\Users\AsusPC\AppData\Local\Temp\gradleProfiler2539981595687742792.gradle
+
+* Running warm-up build #1
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava FROM-CACHE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 18s
+4 actionable tasks: 1 executed, 1 from cache, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 155 ms
+Time to task execution 9454 ms
+Execution time 19004 ms
+
+* Running warm-up build #2
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 9 ms
+Time to task execution 322 ms
+Execution time 1788 ms
+
+* Running warm-up build #3
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 9 ms
+Time to task execution 234 ms
+Execution time 1422 ms
+
+* Running warm-up build #4
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 10 ms
+Time to task execution 224 ms
+Execution time 1429 ms
+
+* Running warm-up build #5
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 9 ms
+Time to task execution 182 ms
+Execution time 1378 ms
+
+* Running warm-up build #6
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 16 ms
+Time to task execution 173 ms
+Execution time 1397 ms
+
+* Using args for instrumented builds:
+
+* Running measured build #1
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 20 ms
+Time to task execution 161 ms
+Execution time 1358 ms
+
+* Running measured build #2
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 21 ms
+Time to task execution 166 ms
+Execution time 1354 ms
+
+* Running measured build #3
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 13 ms
+Time to task execution 163 ms
+Execution time 1364 ms
+
+* Running measured build #4
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 7 ms
+Time to task execution 153 ms
+Execution time 1328 ms
+
+* Running measured build #5
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 5 ms
+Time to task execution 149 ms
+Execution time 1310 ms
+
+* Running measured build #6
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 5 ms
+Time to task execution 153 ms
+Execution time 1326 ms
+
+* Running measured build #7
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 4 ms
+Time to task execution 149 ms
+Execution time 1316 ms
+
+* Running measured build #8
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 6 ms
+Time to task execution 141 ms
+Execution time 1287 ms
+
+* Running measured build #9
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 3 ms
+Time to task execution 153 ms
+Execution time 1293 ms
+
+* Running measured build #10
+> Applying non-ABI change to 'C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\.\utils\src\main\java\Utils.java'
+Configuration on demand is an incubating feature.
+
+> Configure project :
+Enabling Java library plugin
+
+> Task :domain:compileJava UP-TO-DATE
+> Task :utils:compileJava
+> Task :core:compileJava UP-TO-DATE
+> Task :app:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html
+Used daemon with pid 11148
+Total GC time: 7 ms
+Time to task execution 214 ms
+Execution time 1361 ms
+
+* Stopping daemons
+Running command C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1\wrapper\dists\gradle-9.5.1-bin\iq79hdu3mqx29lgffhp8bfmx\gradle-9.5.1\bin\gradle.bat --stop --gradle-user-home C:\Users\AsusPC\Tools\gradle-profiler-user-homes\ca1-gradle-9.5.1
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Results written to C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\benchmark-results\gradle-9.5.1-complete
+  C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\benchmark-results\gradle-9.5.1-complete\benchmark.csv
+  C:\Users\AsusPC\Projects\DevOps-Sup-CA1-26\benchmark-results\gradle-9.5.1-complete\benchmark.html
+
