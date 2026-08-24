@@ -100,3 +100,66 @@ The measured results also showed moderate variation: the standard deviation was 
 - `gradle-7.6.4/benchmark.html`
 - `gradle-7.6.4/benchmark.csv`
 - `gradle-7.6.4/profile.log`
+
+
+## Gradle 9.5.1 upgrade and optimisation
+
+### Upgrade changes
+
+The project was upgraded from Gradle 7.5.1 to Gradle 9.5.1. The build scripts were migrated from Groovy DSL to Kotlin DSL, and the Gradle wrapper files were updated accordingly.
+
+The Kotlin DSL build scripts document the project structure and dependency scopes. The `core` module exposes the `domain` module through `api`, while internal dependencies use `implementation`.
+
+The upgraded project was validated with successful Gradle builds and performance benchmarks.
+
+### Gradle 9.5.1 benchmark
+
+The same Gradle Profiler methodology was used for the Gradle 9.5.1 benchmark as for the initial baseline:
+
+- six warm-up builds;
+- ten measured builds;
+- `abiChange` and `nonAbiChange` scenarios;
+- configuration time and garbage-collection time measurement;
+- isolated Gradle user home.
+
+The benchmark results were recorded in commit [`e304286f`](https://github.com/KK22334/DevOps-Sup-CA1-26/commit/e304286f).
+
+| Scenario | Gradle 7.5.1 mean | Gradle 9.5.1 mean | Difference | Change |
+| --- | ---: | ---: | ---: | ---: |
+| ABI change | 2,100.68 ms | 2,414.02 ms | +313.34 ms | +14.92% |
+| Non-ABI change | 1,179.80 ms | 1,330.23 ms | +150.43 ms | +12.75% |
+
+The Gradle 9.5.1 benchmark did not improve incremental compilation performance in this project. The mean execution time increased for both scenarios. This result applies to the tested project, hardware, operating system and benchmark configuration and should not be generalised to all Gradle builds.
+
+The complete Gradle 9.5.1 benchmark files are available in the [`gradle-9.5.1-complete`](https://github.com/KK22334/DevOps-Sup-CA1-26/tree/e304286f/benchmark-results/gradle-9.5.1-complete) directory.
+
+### Build optimisation with configuration cache
+
+The project already had Gradle build caching enabled through `gradle.properties`. Configuration cache was added with:
+
+```properties
+org.gradle.configuration-cache=true
+```
+
+This change was recorded in commit [`12943273`](https://github.com/KK22334/DevOps-Sup-CA1-26/commit/12943273).
+
+The project configuration already enabled the Gradle build cache. The baseline scan intentionally used `--no-build-cache`, so it was a measurement baseline rather than evidence that build caching had just been enabled.
+
+#### Validation results
+
+An initial post-upgrade clean build without configuration cache completed in 1 minute 38 seconds. The first build with configuration cache completed in 19 seconds and stored an entry. A subsequent build reused the configuration cache and completed in 18 seconds.
+
+The persistent setting was validated by running `.\gradlew.bat clean build --scan` without the `--configuration-cache` command-line option. Gradle reported `Reusing configuration cache` and `Configuration cache entry reused`. The build completed successfully in 18 seconds; 8 tasks were executed and 4 tasks were taken from the build cache.
+
+This observed reduction from 1 minute 38 seconds to 18 seconds is not a controlled comparison and must not be attributed only to configuration cache. The Gradle daemon and existing build cache also contributed.
+
+#### Relevant Build Scans
+
+- [Initial Gradle 9.5.1 clean build — 1m 38s](https://gradle.com/s/j4r3wpto5r44i)
+- [First configuration-cache build — 19s](https://gradle.com/s/7hkzxirhwdyom)
+- [Configuration-cache reuse validation — 18s](https://gradle.com/s/3qj7c3ljzyjnk)
+- [Persistent configuration-cache validation — 18s](https://gradle.com/s/co2tnlhezbwgo)
+
+#### Environment limitation
+
+Gradle reported that some Windows performance counters could not be initialised. These warnings did not cause the builds to fail, but resource-usage information in the Build Scans may be incomplete.
