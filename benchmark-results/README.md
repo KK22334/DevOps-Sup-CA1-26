@@ -163,3 +163,21 @@ This observed reduction from 1 minute 38 seconds to 18 seconds is not a controll
 #### Environment limitation
 
 Gradle reported that some Windows performance counters could not be initialised. These warnings did not cause the builds to fail, but resource-usage information in the Build Scans may be incomplete.
+
+## Controlled evaluation of build cache and configuration cache
+
+A controlled set of Gradle 9.5.1 builds was executed on the same project state. Each run used `clean build` and a Gradle Build Scan. The Gradle daemon was warmed before the measurements. The build cache was explicitly disabled for the control and configuration-cache-only runs.
+
+| Run | Configuration | Result | Build Scan |
+| --- | --- | --- | --- |
+| Initial no-cache run | `--no-configuration-cache --no-build-cache` | 1m; 12 tasks executed | [Initial no-cache run](https://gradle.com/s/xfmghkzfruq5i) |
+| Warm control | `--no-configuration-cache --no-build-cache` | 47s; 12 tasks executed | [Warm control](https://gradle.com/s/4jmfmyhwwtcq6) |
+| Configuration cache only | `--configuration-cache --no-build-cache` | 46s; 12 tasks executed; configuration cache reused | [Configuration cache only](https://gradle.com/s/gmvmwqimoepic) |
+| Configuration cache only repeat | `--configuration-cache --no-build-cache` | 48s; 12 tasks executed; configuration cache reused | [Configuration cache repeat](https://gradle.com/s/6tflchttqjakq) |
+| Configuration cache and build cache | `--configuration-cache --build-cache` | 17s; 8 tasks executed and 4 tasks retrieved from cache | [Combined cache run](https://gradle.com/s/z4i2qfpt25aum) |
+
+The first no-cache run is retained as a diagnostic result, but it is excluded from the warm comparison because the environment was still being warmed. The two configuration-cache-only runs completed in 46–48 seconds compared with 47 seconds for the warm control. Therefore, configuration cache was successfully reused, but it did not produce a material reduction in the total time of this clean build when task output caching was disabled.
+
+The combined configuration-cache and build-cache run completed in 17 seconds. Compared with the 47-second warm control, this was a reduction of 30 seconds, or approximately 63.8%. This improvement represents the combined effect of configuration-cache reuse and build-cache reuse; it must not be attributed to configuration cache alone. The build cache had already been enabled in `gradle.properties` before this experiment, so this test evaluates its contribution to the end-to-end build time.
+
+The same Windows performance-counter warnings appeared during these scans. They did not affect build correctness, but resource-usage information in the scans may be incomplete.
