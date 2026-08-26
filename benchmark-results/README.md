@@ -181,3 +181,32 @@ The first no-cache run is retained as a diagnostic result, but it is excluded fr
 The combined configuration-cache and build-cache run completed in 17 seconds. Compared with the 47-second warm control, this was a reduction of 30 seconds, or approximately 63.8%. This improvement represents the combined effect of configuration-cache reuse and build-cache reuse; it must not be attributed to configuration cache alone. The build cache had already been enabled in `gradle.properties` before this experiment, so this test evaluates its contribution to the end-to-end build time.
 
 The same Windows performance-counter warnings appeared during these scans. They did not affect build correctness, but resource-usage information in the scans may be incomplete.
+
+
+## Gradle 7.6.4 DSL comparison
+
+To evaluate the impact of the build-script DSL, the project after the migration from Groovy DSL to Kotlin DSL was benchmarked with Gradle 7.6.4. The Gradle version and benchmark scenarios were kept constant.
+
+The Kotlin DSL version corresponds to commit [`41dc8163`](https://github.com/KK22334/DevOps-Sup-CA1-26/commit/41dc8163). Gradle Profiler 0.25.2 was used with six warm-up builds and ten measured builds for each scenario. The benchmark used the `abiChange` and `nonAbiChange` scenarios, an isolated Gradle user home, and measurements of execution time, task-start time and garbage-collection time.
+
+### Kotlin DSL results
+
+| Scenario | Measurements | Mean | Median | Minimum | Maximum | Standard deviation |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| ABI change | 10 | 2,274.26 ms | 2,281.66 ms | 2,201.08 ms | 2,339.06 ms | 46.70 ms |
+| Non-ABI change | 10 | 1,270.03 ms | 1,261.64 ms | 1,238.17 ms | 1,356.14 ms | 35.48 ms |
+
+### Comparison with Groovy DSL
+
+| Scenario | Groovy DSL mean | Kotlin DSL mean | Difference | Change |
+| --- | ---: | ---: | ---: | ---: |
+| ABI change | 2,251.89 ms | 2,274.26 ms | +22.37 ms | +0.99% |
+| Non-ABI change | 1,201.19 ms | 1,270.03 ms | +68.84 ms | +5.73% |
+
+The Kotlin DSL benchmark did not show a performance improvement over the Groovy DSL in this project. The measured execution time was slightly higher for both scenarios. These results describe this project, hardware and benchmark configuration only and should not be interpreted as proof that Kotlin DSL is intrinsically slower.
+
+The benchmark files are available in:
+
+- `gradle-7.6.4-kotlin-dsl/benchmark.csv`
+- `gradle-7.6.4-kotlin-dsl/benchmark.html`
+- `gradle-7.6.4-kotlin-dsl/profile.log`
